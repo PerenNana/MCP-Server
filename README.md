@@ -42,7 +42,7 @@ Make sure you have the following installed:
 
 #### Clone the repository
 ```bash
-git clone https://github.com/your-username/mcp-server.git
+git clone https://github.com/PerenNana/MCP-Server.git
 ```
 ```bash
 cd mcp-server
@@ -67,12 +67,13 @@ To use this MCP server with Claude Desktop:
       "command": "uv",
       "args": [
         "--directory",
-        "C:...",
+        "C:\\Users\\paulp\\PycharmProjects\\PythonProject\\mcp-server\\literature",
         "run",
         "python",
         "literature.py"
       ]
     },
+    ...
   }
 }
 ```
