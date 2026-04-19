@@ -22,7 +22,7 @@ The weather provides temperature, wind's speed and direction and detailed foreca
 ## How to configure
 
 ### Install claude desktop
-In this project, Claude Desktop is used as an MCP-Client. Therefore, some configuration are required. 
+In this project, Claude Desktop is used as a MCP-Client. Therefore, some configuration are required. 
 
 ### Add a claude desktop config file 
 Go to claude desktop open settings and add or configure a 'claude_desktop_config' file.
