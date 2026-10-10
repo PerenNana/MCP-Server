@@ -9,9 +9,11 @@ This project implements a Model Context Protocol (MCP) server that provides usef
 It is designed to be used with Claude Desktop as an MCP client.
 
 ### literature
-Searches the arXiv database for relevant papers on a given topic, 
-returning the title, URL, and authors of each result useful for 
-systematic literature reviews.
+Searches the arXiv database for the most relevant papers on a given topic
+(default: top 5), useful for systematic literature reviews. It fetches a pool
+of 50 candidates, re-ranks them locally by relevance (BM25 on title and abstract)
+and returns title, authors, year, category, URL/PDF link and a short summary
+of each abstract.
 
 ### news_aggregator
 The news_aggregator provides a list of breaking news from popular sources such as tagesschau, BBC News, DW world, heise online, Spiegel Online and New York Times about a specific topic. 
