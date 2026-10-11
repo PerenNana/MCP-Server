@@ -15,6 +15,15 @@ of 50 candidates, re-ranks them locally by relevance (BM25 on title and abstract
 and returns title, authors, year, category, URL/PDF link and a short summary
 of each abstract.
 
+Two tools share the same search logic (`literature/ranking.py`):
+
+- `search_arxiv` (`literature_arxiv.py`): searches arXiv (mostly preprints).
+- `search_semantic_scholar` (`literature_semantic_scholar.py`): searches Semantic Scholar,
+  which also covers peer-reviewed papers and additionally returns venue, citation count and DOI.
+  Without an API key the public rate limit is shared and often exhausted; set a free key
+  as environment variable `SEMANTIC_SCHOLAR_API_KEY` (add it under `"env"` in the
+  Claude Desktop config).
+
 ### news_aggregator
 The news_aggregator provides a list of breaking news from popular sources such as tagesschau, BBC News, DW world, heise online, Spiegel Online and New York Times about a specific topic. 
 
@@ -49,6 +58,18 @@ git clone https://github.com/PerenNana/MCP-Server.git
 ```bash
 cd mcp-server
 ```
+for academic literature search tool 
+```bash
+cd literature
+```
+for news aggregation tool
+```bash
+cd news-aggregator
+```
+for weather tool 
+```bash
+cd weather
+```
 #### Create virtual environment & install dependencies
 ```bash
 uv venv
@@ -72,7 +93,7 @@ To use this MCP server with Claude Desktop:
         "C:\\Users\\paulp\\PycharmProjects\\PythonProject\\mcp-server\\literature",
         "run",
         "python",
-        "literature.py"
+        "literature_arxiv.py"
       ]
     },
     ...
